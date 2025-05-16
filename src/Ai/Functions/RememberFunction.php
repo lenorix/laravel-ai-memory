@@ -31,13 +31,22 @@ class RememberFunction extends GPTFunction
         return function ($queries): mixed {
             Log::info("Accessing AI memory in scope $this->scopeName");
 
-            return AiMemory::where('memorable', $this->memorableScope)
+            $memories = $this->memorableScope
+                ? AiMemory::where('memorable', $this->memorableScope)
+                : AiMemory::whereNull('memorable');
+
+            $memories = $memories
                 ->where(function ($query) use ($queries) {
                     foreach ($queries as $queryString) {
                         $query->orWhere('content', 'like', "%$queryString%");
                     }
                 })
                 ->get();
+
+            $total = $memories->count();
+            Log::debug("Accessed $total AI memories in scope $this->scopeName");
+
+            return $memories;
         };
     }
 
