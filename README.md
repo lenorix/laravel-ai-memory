@@ -26,14 +26,14 @@ composer require lenorix/laravel-ai-memory
 You can publish and run the migrations with:
 
 ```bash
-php artisan vendor:publish --tag="laravel-ai-memory-migrations"
+php artisan vendor:publish --tag="ai-memory-migrations"
 php artisan migrate
 ```
 
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag="laravel-ai-memory-config"
+php artisan vendor:publish --tag="ai-memory-config"
 ```
 
 This is the contents of the published config file:
@@ -46,7 +46,7 @@ return [
 Optionally, you can publish the views using
 
 ```bash
-php artisan vendor:publish --tag="laravel-ai-memory-views"
+php artisan vendor:publish --tag="ai-memory-views"
 ```
 
 ## Usage
