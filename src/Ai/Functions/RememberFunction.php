@@ -32,8 +32,10 @@ class RememberFunction extends GPTFunction
             Log::info("Accessing AI memory in scope $this->scopeName");
 
             $memories = $this->memorableScope
-                ? AiMemory::where('memorable', $this->memorableScope)
-                : AiMemory::whereNull('memorable');
+                ? AiMemory::where('memorable_type', $this->memorableScope->getMorphClass())
+                    ->where('memorable_id', $this->memorableScope->getKey())
+                : AiMemory::whereNull('memorable_type')
+                    ->whereNull('memorable_id');
 
             $memories = $memories
                 ->where(function ($query) use ($queries) {
