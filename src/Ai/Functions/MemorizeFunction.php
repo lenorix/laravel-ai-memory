@@ -2,11 +2,11 @@
 
 namespace Lenorix\AiMemory\Ai\Functions;
 
+use Closure;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Log;
 use Lenorix\AiMemory\Models\AiMemory;
 use MalteKuhr\LaravelGPT\GPTFunction;
-use Closure;
 
 class MemorizeFunction extends GPTFunction
 {
@@ -25,13 +25,12 @@ class MemorizeFunction extends GPTFunction
      * If the Closure returns null, the chat interaction is paused until the 'send()' method in
      * the request is invoked again. For all other return values, the response is JSON encoded
      * and forwarded to the model for further processing.
-     *
-     * @return Closure
      */
     public function function(): Closure
     {
         return function ($content): mixed {
             Log::info("Creating AI memory in scope $this->scopeName");
+
             return AiMemory::create([
                 'content' => $content,
                 'memorable' => $this->memorableScope,
@@ -43,8 +42,6 @@ class MemorizeFunction extends GPTFunction
      * Defines the rules for input validation and JSON schema generation. Override this
      * method to provide custom validation rules for the function. The documentation will
      * have the same order as the rules are defined in this method.
-     *
-     * @return array
      */
     public function rules(): array
     {
@@ -56,8 +53,6 @@ class MemorizeFunction extends GPTFunction
     /**
      * Describes the purpose and functionality of the GPT function. This is utilized
      * for generating the function documentation.
-     *
-     * @return string
      */
     public function description(): string
     {

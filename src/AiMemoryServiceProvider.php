@@ -2,9 +2,9 @@
 
 namespace Lenorix\AiMemory;
 
+use Lenorix\AiMemory\Commands\AiMemoryCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Lenorix\AiMemory\Commands\AiMemoryCommand;
 
 class AiMemoryServiceProvider extends PackageServiceProvider
 {
@@ -18,8 +18,8 @@ class AiMemoryServiceProvider extends PackageServiceProvider
         $package
             ->name('ai-memory')
             ->hasConfigFile()
-            /*->hasViews()*/
+            /* ->hasViews() */
             ->hasMigration('create_ai_memory_table')
-            /*->hasCommand(AiMemoryCommand::class)*/;
+            /* ->hasCommand(AiMemoryCommand::class) */;
     }
 }
