@@ -1,6 +1,6 @@
 <?php
 
-namespace Lenorix\AiMemory\Commands;
+namespace Lenorix\LaravelAiMemory\Commands;
 
 use Illuminate\Console\Command;
 

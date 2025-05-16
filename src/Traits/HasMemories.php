@@ -1,6 +1,6 @@
 <?php
 
-namespace Lenorix\AiMemory\Traits;
+namespace Lenorix\LaravelAiMemory\Traits;
 
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Lenorix\AiMemory\Models\AiMemory;

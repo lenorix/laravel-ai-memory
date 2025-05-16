@@ -1,6 +1,6 @@
 <?php
 
-namespace Lenorix\AiMemory\Facades;
+namespace Lenorix\LaravelAiMemory\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Lenorix\AiMemory\Models;
+namespace Lenorix\LaravelAiMemory\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;

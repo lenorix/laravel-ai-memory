@@ -8,7 +8,7 @@ return new class extends Migration
 {
     public function up()
     {
-        Schema::create('laravel_ai_memory_table', function (Blueprint $table) {
+        Schema::create('ai_memory', function (Blueprint $table) {
             if (config('ai-memory.use_ulid')) {
                 $table->ulid('id')->primary()->index();
                 $table->nullableUlidMorphs('memorable');
@@ -25,6 +25,6 @@ return new class extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('laravel_ai_memory_table');
+        Schema::dropIfExists('ai_memory');
     }
 };

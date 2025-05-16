@@ -1,6 +1,6 @@
 <?php
 
-namespace Lenorix\AiMemory\Ai\Functions;
+namespace Lenorix\LaravelAiMemory\Ai\Functions;
 
 use Closure;
 use Illuminate\Database\Eloquent\Model;

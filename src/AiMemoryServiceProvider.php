@@ -1,6 +1,6 @@
 <?php
 
-namespace Lenorix\AiMemory;
+namespace Lenorix\LaravelAiMemory;
 
 use Lenorix\AiMemory\Commands\AiMemoryCommand;
 use Spatie\LaravelPackageTools\Package;

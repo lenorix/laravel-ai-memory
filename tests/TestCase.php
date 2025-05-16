@@ -1,9 +1,9 @@
 <?php
 
-namespace Lenorix\AiMemory\Tests;
+namespace Lenorix\LaravelAiMemory\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Lenorix\AiMemory\AiMemoryServiceProvider;
+use Lenorix\LaravelAiMemory\AiMemoryServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
@@ -13,7 +13,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Lenorix\\AiMemory\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'Lenorix\\LaravelAiMemory\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 

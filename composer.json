@@ -35,13 +35,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Lenorix\\AiMemory\\": "src/",
-            "Lenorix\\AiMemory\\Database\\Factories\\": "database/factories/"
+            "Lenorix\\LaravelAiMemory\\": "src/",
+            "Lenorix\\LaravelAiMemory\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Lenorix\\AiMemory\\Tests\\": "tests/",
+            "Lenorix\\LaravelAiMemory\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
@@ -64,10 +64,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Lenorix\\AiMemory\\AiMemoryServiceProvider"
+                "Lenorix\\LaravelAiMemory\\AiMemoryServiceProvider"
             ],
             "aliases": {
-                "AiMemory": "Lenorix\\AiMemory\\Facades\\AiMemory"
+                "AiMemory": "Lenorix\\LaravelAiMemory\\Facades\\AiMemory"
             }
         }
     },

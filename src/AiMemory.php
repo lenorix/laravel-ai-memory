@@ -1,5 +1,5 @@
 <?php
 
-namespace Lenorix\AiMemory;
+namespace Lenorix\LaravelAiMemory;
 
 class AiMemory {}

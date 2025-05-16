@@ -1,5 +1,5 @@
 <?php
 
-use Lenorix\AiMemory\Tests\TestCase;
+use Lenorix\LaravelAiMemory\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);
