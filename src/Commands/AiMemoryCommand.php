@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Lenorix\AiMemory\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class AiMemoryCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-ai-memory';
 
     public $description = 'My command';
 
