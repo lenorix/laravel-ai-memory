@@ -2,7 +2,7 @@
 
 namespace Lenorix\LaravelAiMemory;
 
-use Lenorix\AiMemory\Commands\AiMemoryCommand;
+use Lenorix\LaravelAiMemory\Commands\AiMemoryCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 

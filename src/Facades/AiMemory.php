@@ -5,12 +5,12 @@ namespace Lenorix\LaravelAiMemory\Facades;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Lenorix\AiMemory\AiMemory
+ * @see \Lenorix\LaravelAiMemory\AiMemory
  */
 class AiMemory extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return \Lenorix\AiMemory\AiMemory::class;
+        return \Lenorix\LaravelAiMemory\AiMemory::class;
     }
 }

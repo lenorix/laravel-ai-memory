@@ -5,7 +5,7 @@ namespace Lenorix\LaravelAiMemory\Ai\Functions;
 use Closure;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Log;
-use Lenorix\AiMemory\Models\AiMemory;
+use Lenorix\LaravelAiMemory\Models\AiMemory;
 use MalteKuhr\LaravelGPT\GPTFunction;
 
 class ForgetFunction extends GPTFunction
