@@ -18,14 +18,23 @@ class MemorizeFunction extends GPTFunction
     public function function(): Closure
     {
         return function (array $contents): mixed {
-            Log::info("Creating AI memory in scope $this->scopeName");
+            Log::info("Creating AI memory in $this->scopeName scope.");
 
             $result = [];
             foreach ($contents as $content) {
+                if (AiMemory::where('content', $content)
+                    ->where('memorable_type', $this->memorableScope?->getMorphClass())
+                    ->where('memorable_id', $this->memorableScope?->getKey())
+                    ->exists()) {
+                    Log::debug("Memory already in $this->scopeName exists.");
+                    continue;
+                }
+
                 $result[] = AiMemory::create([
                     'content' => $content,
                     'memorable' => $this->memorableScope,
                 ]);
+                Log::debug("Memory created in $this->scopeName scope.");
             }
             return $result;
         };
