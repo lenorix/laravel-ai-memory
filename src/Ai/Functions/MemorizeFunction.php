@@ -27,6 +27,7 @@ class MemorizeFunction extends GPTFunction
                     ->where('memorable_id', $this->memorableScope?->getKey())
                     ->exists()) {
                     Log::debug("Memory already in $this->scopeName exists.");
+
                     continue;
                 }
 
@@ -36,6 +37,7 @@ class MemorizeFunction extends GPTFunction
                 ]);
                 Log::debug("Memory created in $this->scopeName scope.");
             }
+
             return $result;
         };
     }
